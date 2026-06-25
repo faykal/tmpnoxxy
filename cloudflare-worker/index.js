@@ -76,7 +76,7 @@ export default {
   <div class="card">
     <div><span class="dot"></span><span style="color:#10b981;font-size:13px;font-weight:500">Active</span></div>
     <h1>NAGETHA Email Worker</h1>
-    <p>Worker ini aktif memproses email masuk untuk domain <code>vtech.biz.id</code> dan meneruskannya ke NAGETHA secara real-time.</p>
+    <p>Worker ini aktif memproses email masuk untuk domain <code>nageetha.web.id</code> dan meneruskannya ke NAGETHA secara real-time.</p>
     <p style="margin-top:20px;font-size:12px;color:#5a5a72">Cloudflare Email Worker — tidak dapat diakses via HTTP</p>
   </div>
 </body>
