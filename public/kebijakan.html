@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Kebijakan & Disclaimer — NAGETHA Temporary Email</title>
+  <meta name="description" content="Kebijakan penggunaan, disclaimer, dan ketentuan layanan NAGETHA. Baca sebelum menggunakan layanan email temporer kami." />
+  <meta name="keywords" content="kebijakan NAGETHA, disclaimer email temporer, syarat penggunaan temp mail" />
+  <meta name="author" content="NAGETHA" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://nagetha.vtech.biz.id/kebijakan" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nagetha.vtech.biz.id/kebijakan" />
+  <meta property="og:title" content="Kebijakan & Disclaimer — NAGETHA" />
+  <meta property="og:description" content="Kebijakan penggunaan, disclaimer, dan ketentuan layanan NAGETHA temporary email." />
+  <meta property="og:site_name" content="NAGETHA" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07070e;
+      --bg-card: #0f0f1a;
+      --border: rgba(255,255,255,0.08);
+      --border-active: rgba(99,102,241,0.4);
+      --text: #eeeef5;
+      --text-2: #8888a8;
+      --text-3: #4a4a6a;
+      --accent: #6366f1;
+      --accent-glow: rgba(99,102,241,0.2);
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --sans: "Space Grotesk", system-ui, sans-serif;
+      --mono: "Fira Code", monospace;
+    }
+
+    html, body {
+      min-height: 100%;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── BG ── */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .bg-canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+    .bg-canvas::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.14) 0%, rgba(139,92,246,0.06) 40%, transparent 70%);
+      animation: beamFloat 12s ease-in-out infinite alternate;
+    }
+    @keyframes beamFloat {
+      0%   { transform: translateX(-50%) translateY(0px); }
+      100% { transform: translateX(-50%) translateY(25px); }
+    }
+    .orb { position: absolute; border-radius: 50%; filter: blur(80px); }
+    .orb-1 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%); top: -5%; left: -15%; animation: orbF 20s ease-in-out infinite alternate; }
+    .orb-2 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%); bottom: 10%; right: -8%; animation: orbF 25s ease-in-out infinite alternate-reverse; }
+    @keyframes orbF { 0%{transform:translate(0,0)} 50%{transform:translate(18px,-12px)} 100%{transform:translate(-10px,15px)} }
+    @media (prefers-reduced-motion: reduce) { .bg-canvas::after, .orb-1, .orb-2 { animation: none; } }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(7,7,14,0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: none;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 36px; height: 36px; }
+    .logo-name { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: var(--text); }
+    .header-nav { display: flex; gap: 4px; }
+    .nav-link {
+      padding: 7px 14px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+    .nav-link.active { background: rgba(99,102,241,0.1); color: var(--accent); border-color: var(--border-active); }
+
+    /* ── MAIN ── */
+    .main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+    }
+
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--warning);
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 100px;
+      padding: 5px 12px;
+      margin-bottom: 18px;
+    }
+
+    .page-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .page-title span {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-desc {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .last-updated {
+      font-size: 12px;
+      color: var(--text-3);
+      margin-bottom: 48px;
+      font-family: var(--mono);
+    }
+
+    /* ── DISCLAIMER BOX ── */
+    .disclaimer-box {
+      background: rgba(239,68,68,0.07);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .disclaimer-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(239,68,68,0.12);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--danger);
+    }
+    .disclaimer-icon svg { width: 18px; height: 18px; }
+    .disclaimer-box h3 { font-size: 14px; font-weight: 700; color: var(--danger); margin-bottom: 6px; }
+    .disclaimer-box p { font-size: 13.5px; color: #c0a0a0; line-height: 1.7; }
+
+    /* ── SECTIONS ── */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .section-body {
+      background: rgba(15,15,26,0.85);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .section-body p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .section-body p:last-child { margin-bottom: 0; }
+
+    .section-body ul {
+      margin: 8px 0 12px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .section-body ul li { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+    .section-body ul li strong { color: var(--text); }
+
+    .section-body h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 16px 0 8px;
+    }
+    .section-body h4:first-child { margin-top: 0; }
+
+    .highlight {
+      background: rgba(99,102,241,0.08);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    .warning-inline {
+      background: rgba(245,158,11,0.07);
+      border-left: 3px solid var(--warning);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 13.5px;
+      color: #b8960a;
+      line-height: 1.7;
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      margin-top: 48px;
+      background: rgba(99,102,241,0.07);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 18px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .contact-box h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .contact-box p { font-size: 14px; color: var(--text-2); margin-bottom: 16px; line-height: 1.6; }
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25d366;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.15s;
+      box-shadow: 0 0 0 1px rgba(37,211,102,0.4);
+    }
+    .contact-link:hover { background: #1ebe5d; box-shadow: 0 0 20px rgba(37,211,102,0.25); }
+    .contact-link svg { width: 17px; height: 17px; }
+
+    /* ── FOOTER ── */
+    .footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 22px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-3);
+      background: rgba(7,7,14,0.6);
+      backdrop-filter: blur(8px);
+    }
+    .footer a { color: var(--text-2); text-decoration: none; transition: color 0.15s; }
+    .footer a:hover { color: var(--accent); }
+    .footer-links { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+    .footer-sep { color: var(--text-3); }
+    .made-by { display: inline-flex; align-items: center; gap: 5px; color: var(--text-3); margin-top: 6px; }
+    .made-by a { color: var(--text-2); font-weight: 600; }
+    .made-by a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .header { padding: 12px 16px; }
+      .main { padding: 36px 16px 56px; }
+      .disclaimer-box { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <header class="header">
+    <a class="logo" href="/" aria-label="NAGETHA Home">
+      <div class="logo-mark">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ng-depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#312e81"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+            <linearGradient id="ng-body" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4338ca"/></linearGradient>
+            <linearGradient id="ng-flap" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#c7d2fe"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+            <linearGradient id="ng-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.5)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+            <filter id="ng-shad" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1e1b4b" flood-opacity="0.55"/></filter>
+          </defs>
+          <rect x="5" y="17" width="26" height="16" rx="3.5" fill="url(#ng-depth)" opacity="0.85"/>
+          <rect x="5" y="14" width="26" height="16" rx="3.5" fill="url(#ng-body)" filter="url(#ng-shad)"/>
+          <path d="M5 19L18 27.5L31 19V17.5Q31 14 28 14H8Q5 14 5 17.5Z" fill="url(#ng-flap)"/>
+          <path d="M5 19L18 27.5L31 19" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+          <rect x="5" y="14" width="26" height="9" rx="3.5" fill="url(#ng-gloss)" opacity="0.55"/>
+        </svg>
+      </div>
+      <span class="logo-name">NAGETHA</span>
+    </a>
+    <nav class="header-nav" aria-label="Navigasi utama">
+      <a class="nav-link" href="/">Inbox</a>
+      <a class="nav-link" href="/faq.html">FAQ</a>
+      <a class="nav-link active" href="/kebijakan.html">Kebijakan</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+      Penting dibaca
+    </div>
+    <h1 class="page-title">Kebijakan &<br><span>Disclaimer</span></h1>
+    <p class="page-desc">Ketentuan penggunaan layanan NAGETHA. Dengan menggunakan layanan ini, kamu dianggap telah membaca dan menyetujui seluruh kebijakan di bawah ini.</p>
+    <div class="last-updated">Terakhir diperbarui: Juni 2026</div>
+
+    <!-- DISCLAIMER UTAMA -->
+    <div class="disclaimer-box" role="alert">
+      <div class="disclaimer-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+      </div>
+      <div>
+        <h3>Disclaimer Penting</h3>
+        <p>NAGETHA adalah layanan email temporer yang disediakan <strong>"sebagaimana adanya"</strong> tanpa jaminan apa pun. Pengelola <strong>tidak bertanggung jawab</strong> atas segala kerugian, kehilangan data, atau dampak lain yang timbul dari penggunaan layanan ini.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">1</span>Deskripsi Layanan</h2>
+      <div class="section-body">
+        <p>NAGETHA menyediakan alamat email temporer (disposable/throwaway email) yang dapat digunakan secara anonim tanpa registrasi. Layanan ini bersifat <strong>gratis</strong> dan ditujukan untuk penggunaan jangka pendek.</p>
+        <p>Layanan ini hanya menerima email masuk (inbound). Tidak tersedia fitur mengirim email keluar.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">2</span>Tidak Ada Tanggung Jawab</h2>
+      <div class="section-body">
+        <p>Pengelola NAGETHA <strong>tidak bertanggung jawab</strong> atas:</p>
+        <ul>
+          <li><strong>Kehilangan email</strong> — email yang masuk dapat hilang kapan saja tanpa pemberitahuan</li>
+          <li><strong>Ketidaktersediaan layanan</strong> — server dapat down atau tidak dapat diakses sewaktu-waktu</li>
+          <li><strong>Kebocoran data</strong> yang timbul dari sifat layanan email temporer yang bersifat publik</li>
+          <li><strong>Kerugian finansial</strong> atau kerugian lain akibat penggunaan atau ketidakmampuan menggunakan layanan</li>
+          <li><strong>Konten email</strong> yang diterima — kami tidak memfilter atau menyensor konten email masuk</li>
+          <li><strong>Penyalahgunaan layanan</strong> oleh pihak ketiga</li>
+        </ul>
+        <div class="warning-inline">
+          ⚠️ Jangan gunakan NAGETHA untuk menerima informasi sensitif seperti password, data perbankan, nomor kartu kredit, atau dokumen rahasia.
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">3</span>Kebijakan Penggunaan</h2>
+      <div class="section-body">
+        <h4>Diperbolehkan ✓</h4>
+        <ul>
+          <li>Menerima email verifikasi dari layanan online</li>
+          <li>Uji coba layanan atau website tanpa menggunakan email utama</li>
+          <li>Menghindari spam pada email pribadi</li>
+          <li>Keperluan pengembangan dan testing</li>
+        </ul>
+        <h4>Dilarang ✗</h4>
+        <ul>
+          <li><strong>Aktivitas ilegal</strong> dalam bentuk apa pun</li>
+          <li><strong>Penipuan, phishing, atau fraud</strong> menggunakan layanan ini</li>
+          <li><strong>Spam atau penyalahgunaan</strong> sistem email</li>
+          <li><strong>Bypass</strong> sistem keamanan atau verifikasi yang melanggar syarat layanan pihak lain</li>
+          <li>Penggunaan secara massal dengan bot atau skrip otomatis yang membebani server</li>
+        </ul>
+        <div class="highlight">
+          Pelanggaran terhadap ketentuan penggunaan dapat mengakibatkan pemblokiran akses ke layanan tanpa pemberitahuan sebelumnya.
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">4</span>Privasi & Data</h2>
+      <div class="section-body">
+        <p>NAGETHA dirancang dengan prinsip privasi minimal:</p>
+        <ul>
+          <li>Tidak ada pendaftaran — tidak ada nama, nomor telepon, atau data identitas yang dikumpulkan</li>
+          <li>Alamat inbox dan email masuk disimpan sementara di database untuk operasional layanan</li>
+          <li>Data dapat dihapus kapan saja oleh pengelola tanpa pemberitahuan</li>
+          <li>Kami tidak menjual data kepada pihak ketiga</li>
+        </ul>
+        <div class="warning-inline">
+          ⚠️ Inbox email temporer bersifat <strong>publik secara teknis</strong>. Siapa pun yang mengetahui alamat emailmu dapat mengakses inbox yang sama. Jangan gunakan untuk data rahasia.
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">5</span>Ketersediaan Layanan</h2>
+      <div class="section-body">
+        <p>NAGETHA disediakan <strong>"sebagaimana adanya"</strong> (as-is) tanpa jaminan uptime atau ketersediaan tertentu. Layanan dapat:</p>
+        <ul>
+          <li>Mengalami downtime untuk maintenance atau gangguan teknis</li>
+          <li>Berubah fitur atau ketentuan tanpa pemberitahuan sebelumnya</li>
+          <li>Dihentikan sewaktu-waktu tanpa notifikasi</li>
+        </ul>
+        <p>Pengelola tidak memberikan kompensasi dalam bentuk apa pun atas ketidaktersediaan layanan.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">6</span>Perubahan Kebijakan</h2>
+      <div class="section-body">
+        <p>Pengelola berhak mengubah kebijakan ini kapan saja. Perubahan berlaku efektif segera setelah dipublikasikan di halaman ini. Penggunaan layanan secara berlanjut setelah perubahan dianggap sebagai persetujuan terhadap kebijakan baru.</p>
+        <p>Tanggal "Terakhir diperbarui" di bagian atas halaman ini mencerminkan kapan kebijakan terakhir direvisi.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="section">
+      <h2 class="section-title"><span class="section-num">7</span>Pengembang & Kredit</h2>
+      <div class="section-body">
+        <p>NAGETHA dikembangkan dan dikelola oleh <strong>VegaTech</strong> sebagai proyek layanan publik gratis.</p>
+        <ul>
+          <li>Pengembang: <strong>VegaTech</strong></li>
+          <li>Saluran resmi: <a href="https://whatsapp.com/channel/0029VbCaDhn11ulT1qwodB2x" target="_blank" rel="noopener noreferrer" style="color:#818cf8">WhatsApp Channel VegaTech</a></li>
+        </ul>
+        <p>Layanan ini tidak berafiliasi dengan layanan email komersial mana pun. Semua hak cipta konten dan desain adalah milik VegaTech.</p>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-box">
+      <h3>Ada Pertanyaan?</h3>
+      <p>Hubungi kami melalui saluran resmi VegaTech di WhatsApp untuk pertanyaan, laporan, atau masukan.</p>
+      <a class="contact-link" href="https://whatsapp.com/channel/0029VbCaDhn11ulT1qwodB2x" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Hubungi VegaTech
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Inbox</a>
+      <span class="footer-sep">&bull;</span>
+      <a href="/faq.html">FAQ</a>
+      <span class="footer-sep">&bull;</span>
+      <a href="/kebijakan.html">Kebijakan</a>
+    </div>
+    <div>&copy; 2026 NAGETHA &mdash; Free temporary email service</div>
+    <div class="made-by">Made with ♥ by <a href="https://whatsapp.com/channel/0029VbCaDhn11ulT1qwodB2x" target="_blank" rel="noopener noreferrer">VegaTech</a></div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>FAQ — NAGETHA Temporary Email</title>
+  <meta name="description" content="Pertanyaan yang sering ditanyakan seputar layanan email temporer NAGETHA. Pelajari cara kerja, keamanan, dan fitur disposable email kami." />
+  <meta name="keywords" content="FAQ NAGETHA, cara pakai email temporer, disposable email Indonesia, temp mail gratis" />
+  <meta name="author" content="NAGETHA" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://nagetha.vtech.biz.id/faq" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nagetha.vtech.biz.id/faq" />
+  <meta property="og:title" content="FAQ — NAGETHA Temporary Email" />
+  <meta property="og:description" content="Pertanyaan yang sering ditanyakan seputar layanan email temporer NAGETHA." />
+  <meta property="og:site_name" content="NAGETHA" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07070e;
+      --bg-card: #0f0f1a;
+      --border: rgba(255,255,255,0.08);
+      --border-active: rgba(99,102,241,0.4);
+      --text: #eeeef5;
+      --text-2: #8888a8;
+      --text-3: #4a4a6a;
+      --accent: #6366f1;
+      --accent-glow: rgba(99,102,241,0.2);
+      --success: #10b981;
+      --sans: "Space Grotesk", system-ui, sans-serif;
+      --mono: "Fira Code", monospace;
+    }
+
+    html, body {
+      min-height: 100%;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── BG ── */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .bg-canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 100%);
+    }
+    .bg-canvas::after {
+      content: "";
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.14) 0%, rgba(139,92,246,0.06) 40%, transparent 70%);
+      animation: beamFloat 12s ease-in-out infinite alternate;
+    }
+    @keyframes beamFloat {
+      0%   { transform: translateX(-50%) translateY(0px); }
+      100% { transform: translateX(-50%) translateY(25px); }
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+    .orb-1 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%); top: -5%; left: -15%; animation: orbF 20s ease-in-out infinite alternate; }
+    .orb-2 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%); bottom: 10%; right: -8%; animation: orbF 25s ease-in-out infinite alternate-reverse; }
+    @keyframes orbF { 0%{transform:translate(0,0)} 50%{transform:translate(18px,-12px)} 100%{transform:translate(-10px,15px)} }
+    @media (prefers-reduced-motion: reduce) { .bg-canvas::after, .orb-1, .orb-2 { animation: none; } }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(7,7,14,0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-mark svg { width: 36px; height: 36px; }
+    .logo-name { font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: var(--text); }
+    .header-nav { display: flex; gap: 4px; }
+    .nav-link {
+      padding: 7px 14px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: all 0.15s;
+      border: 1px solid transparent;
+    }
+    .nav-link:hover { background: rgba(255,255,255,0.06); color: var(--text); }
+    .nav-link.active { background: rgba(99,102,241,0.1); color: var(--accent); border-color: var(--border-active); }
+
+    /* ── MAIN ── */
+    .main {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 56px 24px 72px;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 5px 12px;
+      margin-bottom: 18px;
+    }
+    .page-title {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .page-title span {
+      background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .page-desc {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    /* ── CATEGORY LABEL ── */
+    .faq-category {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 40px 0 16px;
+    }
+    .faq-category:first-of-type { margin-top: 0; }
+
+    /* ── ACCORDION ── */
+    .faq-item {
+      background: rgba(15,15,26,0.85);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: border-color 0.2s;
+    }
+    .faq-item:hover { border-color: rgba(255,255,255,0.13); }
+    .faq-item.open { border-color: var(--border-active); }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--sans);
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      transition: color 0.15s;
+    }
+    .faq-item.open .faq-question { color: var(--accent); }
+
+    .faq-chevron {
+      width: 18px;
+      height: 18px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      transition: transform 0.25s ease, color 0.15s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); color: var(--accent); }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 600px; }
+
+    .faq-answer-inner {
+      padding: 0 20px 20px;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.8;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .faq-answer-inner p { margin-bottom: 10px; }
+    .faq-answer-inner p:last-child { margin-bottom: 0; }
+    .faq-answer-inner code {
+      font-family: var(--mono);
+      font-size: 12.5px;
+      background: rgba(99,102,241,0.1);
+      color: #818cf8;
+      padding: 2px 7px;
+      border-radius: 5px;
+    }
+    .faq-answer-inner ul {
+      margin: 8px 0 10px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .faq-answer-inner ul li { color: var(--text-2); }
+
+    /* ── CTA ── */
+    .cta-box {
+      margin-top: 52px;
+      background: rgba(99,102,241,0.07);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 18px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .cta-box h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .cta-box p { font-size: 14px; color: var(--text-2); margin-bottom: 20px; }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: var(--sans);
+      transition: all 0.15s;
+      box-shadow: 0 0 0 1px rgba(99,102,241,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .btn-primary:hover { background: #7c7fff; box-shadow: 0 0 20px var(--accent-glow); }
+
+    /* ── FOOTER ── */
+    .footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 22px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-3);
+      background: rgba(7,7,14,0.6);
+      backdrop-filter: blur(8px);
+    }
+    .footer a { color: var(--text-2); text-decoration: none; transition: color 0.15s; }
+    .footer a:hover { color: var(--accent); }
+    .footer-links { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+    .footer-sep { color: var(--text-3); }
+    .footer-copy { color: var(--text-3); }
+    .made-by { display: inline-flex; align-items: center; gap: 5px; color: var(--text-3); }
+    .made-by a { color: var(--text-2); font-weight: 600; }
+    .made-by a:hover { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .header { padding: 12px 16px; }
+      .main { padding: 36px 16px 56px; }
+      .nav-link span { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <header class="header">
+    <a class="logo" href="/" aria-label="NAGETHA Home">
+      <div class="logo-mark">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ng-depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#312e81"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+            <linearGradient id="ng-body" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4338ca"/></linearGradient>
+            <linearGradient id="ng-flap" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#c7d2fe"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+            <linearGradient id="ng-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.5)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+            <filter id="ng-shad" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1e1b4b" flood-opacity="0.55"/></filter>
+          </defs>
+          <rect x="5" y="17" width="26" height="16" rx="3.5" fill="url(#ng-depth)" opacity="0.85"/>
+          <rect x="5" y="14" width="26" height="16" rx="3.5" fill="url(#ng-body)" filter="url(#ng-shad)"/>
+          <path d="M5 19L18 27.5L31 19V17.5Q31 14 28 14H8Q5 14 5 17.5Z" fill="url(#ng-flap)"/>
+          <path d="M5 19L18 27.5L31 19" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+          <rect x="5" y="14" width="26" height="9" rx="3.5" fill="url(#ng-gloss)" opacity="0.55"/>
+        </svg>
+      </div>
+      <span class="logo-name">NAGETHA</span>
+    </a>
+    <nav class="header-nav" aria-label="Navigasi utama">
+      <a class="nav-link" href="/">Inbox</a>
+      <a class="nav-link active" href="/faq.html">FAQ</a>
+      <a class="nav-link" href="/kebijakan.html">Kebijakan</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <div class="page-eyebrow">
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="5"/></svg>
+      Bantuan
+    </div>
+    <h1 class="page-title">Pertanyaan yang Sering<br><span>Ditanyakan</span></h1>
+    <p class="page-desc">Semua yang perlu kamu tahu tentang NAGETHA — layanan email temporer gratis tanpa daftar.</p>
+
+    <!-- ── KATEGORI: UMUM ── -->
+    <div class="faq-category">Umum</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apa itu NAGETHA?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>NAGETHA adalah layanan email temporer (disposable email) yang gratis. Kamu bisa mendapatkan alamat email instan tanpa perlu mendaftar atau memberikan data pribadi apa pun.</p>
+          <p>Cocok dipakai untuk mendaftar ke situs yang memerlukan verifikasi email, menghindari spam, atau melindungi privasi email utamamu.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apakah NAGETHA gratis?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Ya, 100% gratis tanpa biaya tersembunyi. Tidak ada paket premium, tidak ada iklan berlebihan, dan tidak perlu kartu kredit.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apakah perlu daftar atau login?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Tidak perlu sama sekali. Buka situs, alamat email langsung dibuat otomatis dan siap digunakan dalam hitungan detik. Tidak ada formulir, tidak ada verifikasi, tidak ada password.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── KATEGORI: CARA KERJA ── -->
+    <div class="faq-category">Cara Kerja</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Bagaimana cara mendapatkan alamat email temporer?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <ul>
+            <li>Buka <a href="/" style="color:#818cf8">nagetha.vtech.biz.id</a></li>
+            <li>Alamat email otomatis dibuat dan ditampilkan di bagian atas</li>
+            <li>Klik <strong>Copy</strong> untuk menyalin alamat tersebut</li>
+            <li>Gunakan alamat itu di mana pun kamu butuh email verifikasi</li>
+            <li>Email masuk akan langsung muncul di inbox secara real-time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Bagaimana email bisa masuk secara real-time?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>NAGETHA menggunakan teknologi <strong>Server-Sent Events (SSE)</strong> — koneksi langsung antara browsermu dan server kami. Begitu email masuk, notifikasi dikirim langsung tanpa perlu reload halaman.</p>
+          <p>Inbox juga melakukan refresh otomatis setiap <code>30 detik</code> sebagai fallback.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Bisa pakai username sendiri?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Bisa! Klik tombol <strong>Custom</strong> di bawah kotak alamat email. Masukkan username pilihanmu (3–30 karakter: huruf, angka, titik, atau tanda hubung), lalu klik <strong>Create</strong>.</p>
+          <p>Contoh: <code>budi123@vtech.biz.id</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Berapa lama email tersimpan?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Email tidak memiliki jangka waktu tetap yang dijamin. Inbox bersifat sementara — bisa dihapus sewaktu-waktu dari sisi server tanpa pemberitahuan sebelumnya.</p>
+          <p>Jika kamu butuh menyimpan isi email penting, segera salin atau download sebelum sesi berakhir.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── KATEGORI: KEAMANAN & PRIVASI ── -->
+    <div class="faq-category">Keamanan &amp; Privasi</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apakah email saya aman dan privat?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>NAGETHA tidak meminta data pribadi apa pun. Namun perlu diingat: email temporer pada dasarnya adalah <strong>kotak masuk bersifat publik</strong> — siapa pun yang mengetahui alamat emailmu secara teoritis dapat mengaksesnya.</p>
+          <p><strong>Jangan gunakan NAGETHA untuk menerima informasi sensitif</strong> seperti password, data perbankan, atau dokumen rahasia.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apakah NAGETHA menyimpan data saya?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>NAGETHA menyimpan alamat inbox dan email yang masuk di database untuk keperluan operasional layanan. Kami <strong>tidak</strong> mengumpulkan nama, nomor telepon, atau data identitas pengguna.</p>
+          <p>Data inbox bersifat sementara dan dapat dihapus kapan saja.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Bolehkah dipakai untuk verifikasi akun media sosial?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Secara teknis bisa, tapi kami <strong>tidak merekomendasikan</strong> untuk akun utama yang penting. Karena inbox bersifat sementara, kamu bisa kehilangan akses ke akun tersebut jika suatu saat dibutuhkan verifikasi ulang lewat email yang sama.</p>
+          <p>Gunakan untuk keperluan one-time verification yang tidak memerlukan akses email jangka panjang.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── KATEGORI: TEKNIS ── -->
+    <div class="faq-category">Teknis</div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Kenapa email belum masuk padahal sudah dikirim?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Beberapa kemungkinan penyebab:</p>
+          <ul>
+            <li>Email masih dalam proses pengiriman — tunggu 1–2 menit</li>
+            <li>Klik tombol <strong>Refresh</strong> untuk memperbarui inbox secara manual</li>
+            <li>Pastikan alamat email yang dituju sudah benar (salin langsung dari kotak, jangan ketik manual)</li>
+            <li>Beberapa layanan memblokir pengiriman ke domain email temporer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Status "Offline" atau "Connecting" terus-menerus?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Ini biasanya karena koneksi internet yang tidak stabil. NAGETHA akan mencoba menyambung ulang secara otomatis setiap 5 detik.</p>
+          <p>Jika masalah berlanjut, coba:</p>
+          <ul>
+            <li>Refresh halaman (<code>Ctrl + R</code> atau <code>Cmd + R</code>)</li>
+            <li>Periksa koneksi internet kamu</li>
+            <li>Gunakan tombol <strong>Refresh</strong> untuk memperbarui inbox secara manual</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Apakah bisa mengirim email dari NAGETHA?
+        <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <div class="faq-answer" role="region">
+        <div class="faq-answer-inner">
+          <p>Tidak. NAGETHA adalah layanan <strong>penerima email saja</strong> (inbound only). Kamu tidak bisa mengirim email dari alamat NAGETHA ke alamat lain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+      <h3>Siap mulai?</h3>
+      <p>Dapatkan alamat email temporer instan — gratis, tanpa daftar, tanpa ribet.</p>
+      <a href="/" class="btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Buka Inbox Saya
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/">Inbox</a>
+      <span class="footer-sep">&bull;</span>
+      <a href="/faq.html">FAQ</a>
+      <span class="footer-sep">&bull;</span>
+      <a href="/kebijakan.html">Kebijakan</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 NAGETHA &mdash; Free temporary email service</div>
+    <div style="margin-top:6px">
+      <span class="made-by">Made with ♥ by <a href="https://whatsapp.com/channel/0029VbCaDhn11ulT1qwodB2x" target="_blank" rel="noopener noreferrer">VegaTech</a></span>
+    </div>
+  </footer>
+
+<script>
+  // Accordion
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".faq-item");
+      const isOpen = item.classList.contains("open");
+      // Close all
+      document.querySelectorAll(".faq-item.open").forEach(el => {
+        el.classList.remove("open");
+        el.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+      });
+      // Toggle current
+      if (!isOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+</script>
+</body>
+</html>

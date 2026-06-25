@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>NAGETHA — Free Temporary Email, Disposable Inbox | No Signup</title>
+  <meta name="description" content="Get a free disposable temporary email address instantly. No signup, no spam. Real-time inbox with Nagetha — the fastest throwaway email service." />
+  <meta name="keywords" content="temporary email, disposable email, throwaway email, fake email, temp mail, anonymous email, no signup email, free temporary inbox" />
+  <meta name="author" content="NAGETHA" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="canonical" href="https://nagetha.vtech.biz.id/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nagetha.vtech.biz.id/" />
+  <meta property="og:title" content="NAGETHA — Free Temporary Email, No Signup" />
+  <meta property="og:description" content="Get a free disposable temporary email address instantly. Real-time inbox, no registration required. Protect your privacy with Nagetha." />
+  <meta property="og:image" content="https://nagetha.vtech.biz.id/favicon.svg" />
+  <meta property="og:site_name" content="NAGETHA" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://nagetha.vtech.biz.id/" />
+  <meta name="twitter:title" content="NAGETHA — Free Temporary Email, No Signup" />
+  <meta name="twitter:description" content="Get a free disposable temporary email address instantly. Real-time inbox, no registration required." />
+  <meta name="twitter:image" content="https://nagetha.vtech.biz.id/favicon.svg" />
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "NAGETHA",
+    "url": "https://nagetha.vtech.biz.id/",
+    "description": "Free disposable temporary email service. Get an instant inbox with no signup, no spam, real-time email delivery.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Instant temporary email address",
+      "Real-time email delivery",
+      "No registration required",
+      "Custom username support",
+      "Multiple domains",
+      "Auto-refresh inbox"
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07070e;
+      --bg-card: #0f0f1a;
+      --bg-hover: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --border-active: rgba(99,102,241,0.5);
+      --text: #eeeef5;
+      --text-2: #8888a8;
+      --text-3: #4a4a6a;
+      --accent: #6366f1;
+      --accent-glow: rgba(99,102,241,0.2);
+      --success: #10b981;
+      --danger: #ef4444;
+      --mono: "JetBrains Mono", "Fira Code", monospace;
+      --sans: "Space Grotesk", system-ui, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ── ANIMATED BACKGROUND ── */
+    .bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    /* Dot grid */
+    .bg-canvas::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    }
+
+    /* Top gradient beam */
+    .bg-canvas::after {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 600px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.18) 0%, rgba(139,92,246,0.08) 40%, transparent 70%);
+      animation: beamFloat 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes beamFloat {
+      0%   { transform: translateX(-50%) translateY(0px) scale(1); }
+      100% { transform: translateX(-50%) translateY(30px) scale(1.05); }
+    }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: orbFloat linear infinite;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      top: -10%; left: -15%;
+      animation: orbFloat 20s ease-in-out infinite alternate;
+      opacity: 1;
+    }
+
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(139,92,246,0.10) 0%, transparent 70%);
+      top: 30%; right: -10%;
+      animation: orbFloat 25s ease-in-out infinite alternate-reverse;
+      opacity: 1;
+    }
+
+    .orb-3 {
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 70%);
+      bottom: 10%; left: 20%;
+      animation: orbFloat 18s ease-in-out infinite alternate;
+      opacity: 1;
+    }
+
+    @keyframes orbFloat {
+      0%   { transform: translate(0px, 0px) scale(1); }
+      33%  { transform: translate(20px, -15px) scale(1.03); }
+      66%  { transform: translate(-10px, 20px) scale(0.97); }
+      100% { transform: translate(15px, 10px) scale(1.02); }
+    }
+
+    /* Ensure content is above bg */
+    header, .hero, .address-wrap, .inbox-wrap, footer, .toasts {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(7,7,14,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 36px;
+      height: 36px;
+      background: none;
+      border-radius: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark svg { width: 36px; height: 36px; }
+
+    .logo-name {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--text);
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text-2);
+      font-family: var(--sans);
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--text-3);
+      transition: all 0.3s;
+      flex-shrink: 0;
+    }
+
+    .live-dot.on { background: var(--success); box-shadow: 0 0 6px var(--success); }
+    .live-dot.pulse { background: #f59e0b; animation: pulse 1.5s infinite; }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 100px;
+      padding: 5px 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-2);
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── ADDRESS BOX ── */
+    .address-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 0 20px 36px;
+    }
+
+    .address-box {
+      width: 100%;
+      max-width: 620px;
+      background: rgba(15,15,26,0.85);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px 22px 18px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .address-box:focus-within {
+      border-color: var(--border-active);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.08), 0 4px 24px rgba(0,0,0,0.3);
+    }
+
+    .address-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 10px;
+    }
+
+    .address-display {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .address-text {
+      flex: 1;
+      font-family: "Fira Code", "JetBrains Mono", monospace;
+      font-size: clamp(14px, 2.5vw, 19px);
+      font-weight: 500;
+      color: var(--accent);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .address-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+      font-family: var(--sans);
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 0 0 1px rgba(99,102,241,0.4), inset 0 1px 0 rgba(255,255,255,0.12);
+    }
+    .btn-primary:hover { background: #7c7fff; box-shadow: 0 0 20px var(--accent-glow); }
+
+    .btn-ghost {
+      background: rgba(255,255,255,0.06);
+      color: var(--text-2);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); color: var(--text); border-color: rgba(255,255,255,0.14); }
+
+    .btn-danger {
+      background: rgba(239,68,68,0.1);
+      color: var(--danger);
+      border: 1px solid rgba(239,68,68,0.2);
+    }
+    .btn-danger:hover { background: var(--danger); color: #fff; }
+
+    .domain-select {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      outline: none;
+    }
+    .domain-select:focus { border-color: var(--border-active); }
+
+    /* ── CUSTOM ADDRESS FORM ── */
+    .custom-form {
+      display: none;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .custom-form.open { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .custom-input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: "Fira Code", "JetBrains Mono", monospace;
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      outline: none;
+      width: 160px;
+    }
+    .custom-input:focus { border-color: var(--border-active); }
+    .at-sym { color: var(--text-3); font-weight: 600; }
+
+    /* ── INBOX ── */
+    .inbox-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px 56px;
+    }
+
+    .inbox-container {
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .inbox-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .inbox-count {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── EMAIL CARDS ── */
+    .email-card {
+      background: rgba(15,15,26,0.85);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .email-card:hover { border-color: rgba(255,255,255,0.13); background: rgba(255,255,255,0.03); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    .email-card.unread { border-left: 2px solid var(--accent); }
+    .email-card.active { border-color: var(--border-active); background: rgba(99,102,241,0.06); }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+
+    .card-sender {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .card-time {
+      font-size: 11px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      font-family: "Fira Code", monospace;
+    }
+
+    .card-subject {
+      font-size: 13px;
+      color: var(--text-2);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 2px;
+    }
+
+    .card-preview {
+      font-size: 12px;
+      color: var(--text-3);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .spam-tag {
+      font-size: 10px;
+      padding: 1px 6px;
+      background: rgba(245,158,11,0.1);
+      color: #f59e0b;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+
+    /* ── EMAIL VIEWER ── */
+    .email-viewer {
+      background: rgba(15,15,26,0.9);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      display: none;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .email-viewer.open { display: block; }
+
+    .viewer-header {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .viewer-meta { flex: 1; min-width: 0; }
+
+    .viewer-subject {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .viewer-from {
+      font-size: 12.5px;
+      color: var(--text-2);
+      margin-bottom: 2px;
+      font-family: "Fira Code", monospace;
+    }
+
+    .viewer-date {
+      font-size: 11.5px;
+      color: var(--text-3);
+    }
+
+    .viewer-actions { display: flex; gap: 6px; flex-shrink: 0; }
+
+    .viewer-tabs {
+      display: flex;
+      padding: 10px 20px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 0;
+    }
+
+    .vtab {
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-3);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.15s;
+      font-family: var(--sans);
+    }
+    .vtab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    .viewer-body { position: relative; }
+
+    .viewer-body iframe {
+      width: 100%;
+      border: none;
+      min-height: 300px;
+      background: #fff;
+      display: block;
+    }
+
+    .viewer-text {
+      padding: 20px;
+      font-family: "Fira Code", "JetBrains Mono", monospace;
+      font-size: 12.5px;
+      color: var(--text-2);
+      line-height: 1.8;
+      white-space: pre-wrap;
+      word-break: break-word;
+      display: none;
+    }
+
+    /* ── EMPTY ── */
+    .empty {
+      text-align: center;
+      padding: 64px 20px;
+    }
+
+    .empty-icon-wrap {
+      width: 64px;
+      height: 64px;
+      background: rgba(99,102,241,0.08);
+      border: 1px solid rgba(99,102,241,0.15);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+    }
+
+    .empty svg {
+      width: 28px;
+      height: 28px;
+      color: var(--accent);
+    }
+
+    .empty h3 {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-2);
+      margin-bottom: 8px;
+    }
+
+    .empty p {
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.7;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    /* ── FEATURES ROW ── */
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 20px 36px;
+      flex-wrap: wrap;
+    }
+
+    .feature-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--text-3);
+    }
+
+    .feature-pill svg {
+      width: 14px;
+      height: 14px;
+      color: var(--success);
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 22px 20px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-3);
+      background: rgba(7,7,14,0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .footer a {
+      color: var(--text-2);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer a:hover { color: var(--accent); }
+
+    /* ── TOAST ── */
+    .toasts {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .toast {
+      background: rgba(22,22,36,0.95);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--text);
+      animation: tin 0.2s ease;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+    }
+    .toast.ok { border-left: 3px solid var(--success); }
+    .toast.err { border-left: 3px solid var(--danger); }
+    .toast.info { border-left: 3px solid var(--accent); }
+    @keyframes tin { from{transform:translateX(100%);opacity:0} to{transform:none;opacity:1} }
+
+    /* ── FOOTER LINKS ── */
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+    .footer-sep { color: var(--text-3); }
+    .footer-copy { color: var(--text-3); margin-bottom: 4px; }
+    .footer-made {
+      font-size: 11.5px;
+      color: var(--text-3);
+      margin-top: 4px;
+    }
+    .footer-made a {
+      color: var(--text-2);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-made a:hover { color: var(--accent); }
+
+    /* ══════════════════════════════════════
+       LOADING SCREEN
+    ══════════════════════════════════════ */
+    #loadScreen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #07070e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    #loadScreen.hiding {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* grid dot bg on loader */
+    #loadScreen::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+
+    /* top glow beam */
+    #loadScreen::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.22) 0%, transparent 65%);
+      pointer-events: none;
+      animation: beamFloat 4s ease-in-out infinite alternate;
+    }
+
+    .load-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ── BIG 3D ICON ── */
+    .load-icon-wrap {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      animation: loadIconFloat 2.4s ease-in-out infinite;
+    }
+
+    @keyframes loadIconFloat {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    /* glow ring behind icon */
+    .load-icon-wrap::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.35) 0%, transparent 70%);
+      animation: iconGlow 2.4s ease-in-out infinite;
+    }
+    @keyframes iconGlow {
+      0%, 100% { transform: scale(1);   opacity: 0.7; }
+      50%       { transform: scale(1.2); opacity: 1; }
+    }
+
+    .load-icon-wrap svg { position: relative; z-index: 1; filter: drop-shadow(0 8px 24px rgba(99,102,241,0.5)); }
+
+    /* ── SPARKLES ── */
+    .load-sparks {
+      position: absolute;
+      inset: -10px;
+      pointer-events: none;
+    }
+
+    .spark {
+      position: absolute;
+      font-size: 14px;
+      animation: sparkAnim linear infinite;
+      opacity: 0;
+    }
+    .spark:nth-child(1){ top:5%;  left:10%; animation-duration:2.1s; animation-delay:0s;    color:#818cf8; }
+    .spark:nth-child(2){ top:10%; right:8%; animation-duration:1.8s; animation-delay:0.4s;  color:#c7d2fe; }
+    .spark:nth-child(3){ bottom:8%;  left:5%;  animation-duration:2.4s; animation-delay:0.8s;  color:#a5b4fc; }
+    .spark:nth-child(4){ bottom:5%; right:10%; animation-duration:1.9s; animation-delay:0.2s;  color:#818cf8; }
+    .spark:nth-child(5){ top:50%;  left:-5%; animation-duration:2.2s; animation-delay:1s;    color:#c7d2fe; }
+    .spark:nth-child(6){ top:50%; right:-5%; animation-duration:2.0s; animation-delay:0.6s;  color:#a5b4fc; }
+
+    @keyframes sparkAnim {
+      0%   { opacity: 0;   transform: scale(0.4) rotate(0deg); }
+      30%  { opacity: 1;   transform: scale(1)   rotate(90deg); }
+      60%  { opacity: 0.6; transform: scale(0.8) rotate(180deg); }
+      100% { opacity: 0;   transform: scale(0.4) rotate(360deg); }
+    }
+
+    /* ── BRAND ── */
+    .load-brand {
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: transparent;
+      background: linear-gradient(90deg, #818cf8, #c7d2fe, #6366f1, #a5b4fc, #818cf8);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: shimmerText 2.2s linear infinite;
+      margin-bottom: 10px;
+    }
+    @keyframes shimmerText {
+      0%   { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    /* ── CYCLING MESSAGE ── */
+    .load-msg {
+      font-size: 13.5px;
+      color: var(--text-3);
+      height: 20px;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      transition: opacity 0.25s ease;
+      margin-bottom: 32px;
+    }
+    .load-msg.fade { opacity: 0; }
+
+    /* ── PROGRESS BAR ── */
+    .load-progress-wrap {
+      width: 200px;
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .load-progress-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 100px;
+      background: linear-gradient(90deg, #4338ca, #818cf8, #c7d2fe);
+      background-size: 200% 100%;
+      animation: barShimmer 1.2s linear infinite;
+      transition: width 0.1s linear;
+    }
+    @keyframes barShimmer {
+      0%   { background-position: 100% 0; }
+      100% { background-position: -100% 0; }
+    }
+
+    /* ── DOTS WAVE ── */
+    .load-dots {
+      display: flex;
+      gap: 6px;
+      margin-top: 16px;
+    }
+    .load-dot-w {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: dotWave 1.2s ease-in-out infinite;
+      opacity: 0.4;
+    }
+    .load-dot-w:nth-child(2) { animation-delay: 0.2s; }
+    .load-dot-w:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotWave {
+      0%, 100% { transform: translateY(0);   opacity: 0.4; }
+      50%       { transform: translateY(-6px); opacity: 1; }
+    }
+
+    /* ══════════════════════════════════════
+       LIVE BADGE REDESIGN
+    ══════════════════════════════════════ */
+    .live-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px 5px 8px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-3);
+      font-family: var(--sans);
+      transition: all 0.4s ease;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* status states */
+    .live-badge.state-on {
+      background: rgba(99,102,241,0.1);
+      border-color: rgba(99,102,241,0.35);
+      color: #a5b4fc;
+      box-shadow: 0 0 14px rgba(99,102,241,0.2);
+    }
+    .live-badge.state-connecting {
+      background: rgba(245,158,11,0.08);
+      border-color: rgba(245,158,11,0.3);
+      color: #fbbf24;
+    }
+    .live-badge.state-offline {
+      background: rgba(239,68,68,0.07);
+      border-color: rgba(239,68,68,0.25);
+      color: #f87171;
+    }
+
+    /* icon container inside badge */
+    .live-icon {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* pulsing ring */
+    .live-ring {
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .live-badge.state-on .live-ring {
+      animation: liveRing 2s ease-out infinite;
+      opacity: 1;
+    }
+    @keyframes liveRing {
+      0%   { transform: scale(0.7); opacity: 0.8; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* the dot inside */
+    .live-dot-new {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: currentColor;
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+    .live-badge.state-on .live-dot-new {
+      box-shadow: 0 0 6px currentColor;
+    }
+    .live-badge.state-connecting .live-dot-new {
+      animation: dotBlink 1s ease-in-out infinite;
+    }
+    @keyframes dotBlink { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    @media (prefers-reduced-motion: reduce) {
+      .orb-1, .orb-2, .orb-3 { animation: none; }
+      .bg-canvas::after { animation: none; }
+      .load-icon-wrap { animation: none; }
+      .load-icon-wrap::before { animation: none; }
+      .spark { animation: none; opacity: 0.6; }
+      .load-brand { animation: none; background-position: 0% center; -webkit-text-fill-color: #818cf8; }
+      .load-progress-bar { animation: none; }
+      .load-dot-w { animation: none; opacity: 0.6; }
+    }
+
+    @media (max-width: 600px) {
+      .header { padding: 12px 16px; }
+      .logo-name { font-size: 13px; }
+      .hero { padding: 36px 16px 24px; }
+      .hero-sub { font-size: 13.5px; }
+      .address-wrap { padding: 0 12px 24px; }
+      .address-box { padding: 16px 14px 14px; border-radius: 14px; }
+      .address-text { font-size: 14px; }
+      .address-actions { gap: 6px; }
+      .btn { padding: 8px 12px; font-size: 12px; }
+      .btn svg { width: 13px; height: 13px; }
+      .domain-select { font-size: 12px; padding: 8px 8px; max-width: 110px; }
+      .inbox-wrap { padding: 0 12px 40px; }
+      .email-card { padding: 13px 14px; }
+      .card-sender { font-size: 13px; }
+      .card-time { font-size: 10px; margin-left: 8px; flex-shrink: 0; }
+      .card-subject { font-size: 12.5px; }
+      .card-preview { font-size: 11.5px; }
+      .viewer-header { flex-direction: column; gap: 10px; padding: 14px 14px; }
+      .viewer-actions { width: 100%; justify-content: flex-end; }
+      .viewer-subject { font-size: 14px; }
+      .viewer-tabs { padding: 8px 14px 0; }
+      .custom-input { width: 130px; }
+      .toasts { bottom: 12px; right: 12px; left: 12px; }
+      .toast { font-size: 12px; }
+      .features { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ LOADING SCREEN ══ -->
+  <div id="loadScreen" role="status" aria-label="Loading NAGETHA">
+    <div class="load-content">
+      <!-- big 3D icon + sparkles -->
+      <div class="load-icon-wrap">
+        <div class="load-sparks" aria-hidden="true">
+          <span class="spark">✦</span>
+          <span class="spark">★</span>
+          <span class="spark">✦</span>
+          <span class="spark">⋆</span>
+          <span class="spark">✧</span>
+          <span class="spark">★</span>
+        </div>
+        <svg width="96" height="96" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ld-depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#312e81"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+            <linearGradient id="ld-body"  x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4338ca"/></linearGradient>
+            <linearGradient id="ld-flap"  x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#c7d2fe"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+            <linearGradient id="ld-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.55)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+            <filter id="ld-shad" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1e1b4b" flood-opacity="0.6"/></filter>
+          </defs>
+          <rect x="5" y="17" width="26" height="16" rx="3.5" fill="url(#ld-depth)" opacity="0.85"/>
+          <rect x="5" y="14" width="26" height="16" rx="3.5" fill="url(#ld-body)" filter="url(#ld-shad)"/>
+          <path d="M5 19L18 27.5L31 19V17.5Q31 14 28 14H8Q5 14 5 17.5Z" fill="url(#ld-flap)"/>
+          <path d="M5 19L18 27.5L31 19" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+          <rect x="5" y="14" width="26" height="9" rx="3.5" fill="url(#ld-gloss)" opacity="0.55"/>
+        </svg>
+      </div>
+
+      <!-- brand name shimmer -->
+      <div class="load-brand">NAGETHA</div>
+
+      <!-- cycling message -->
+      <div class="load-msg" id="loadMsg">Warming up your inbox&hellip;</div>
+
+      <!-- progress bar -->
+      <div class="load-progress-wrap">
+        <div class="load-progress-bar" id="loadBar"></div>
+      </div>
+
+      <!-- wave dots -->
+      <div class="load-dots" aria-hidden="true">
+        <div class="load-dot-w"></div>
+        <div class="load-dot-w"></div>
+        <div class="load-dot-w"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a class="logo" href="/" aria-label="NAGETHA — Temporary Email Home">
+      <div class="logo-mark" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ng-depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#312e81"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+            <linearGradient id="ng-body" x1="0.1" y1="0" x2="0.9" y2="1"><stop offset="0%" stop-color="#818cf8"/><stop offset="100%" stop-color="#4338ca"/></linearGradient>
+            <linearGradient id="ng-flap" x1="0" y1="0" x2="0.2" y2="1"><stop offset="0%" stop-color="#c7d2fe"/><stop offset="100%" stop-color="#6366f1"/></linearGradient>
+            <linearGradient id="ng-gloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(255,255,255,0.5)"/><stop offset="100%" stop-color="rgba(255,255,255,0)"/></linearGradient>
+            <filter id="ng-shad" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#1e1b4b" flood-opacity="0.55"/></filter>
+          </defs>
+          <!-- 3D depth layer -->
+          <rect x="5" y="17" width="26" height="16" rx="3.5" fill="url(#ng-depth)" opacity="0.85"/>
+          <!-- Main body -->
+          <rect x="5" y="14" width="26" height="16" rx="3.5" fill="url(#ng-body)" filter="url(#ng-shad)"/>
+          <!-- Envelope flap -->
+          <path d="M5 19L18 27.5L31 19V17.5Q31 14 28 14H8Q5 14 5 17.5Z" fill="url(#ng-flap)"/>
+          <!-- Flap crease -->
+          <path d="M5 19L18 27.5L31 19" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+          <!-- Gloss highlight -->
+          <rect x="5" y="14" width="26" height="9" rx="3.5" fill="url(#ng-gloss)" opacity="0.55"/>
+        </svg>
+      </div>
+      <span class="logo-name">NAGETHA</span>
+    </a>
+    <div class="header-right">
+      <div class="live-badge state-connecting" id="liveBadge" role="status" aria-live="polite">
+        <div class="live-icon">
+          <span class="live-ring"></span>
+          <span class="live-dot-new" id="liveDot"></span>
+        </div>
+        <span id="liveText">Connecting</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1 class="hero-title">Your <span>Temporary</span> Inbox</h1>
+    <p class="hero-sub">Instant disposable email. No signup, no spam. Emails arrive in real-time — protect your privacy.</p>
+  </div>
+
+  <!-- FEATURES ROW -->
+  <div class="features" aria-hidden="true">
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+      No signup required
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+      Real-time delivery
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+      100% free
+    </div>
+    <div class="feature-pill">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+      Custom username
+    </div>
+  </div>
+
+  <!-- ADDRESS -->
+  <div class="address-wrap">
+    <div class="address-box">
+      <div class="address-label">Your temporary email address</div>
+      <div class="address-display">
+        <span class="address-text" id="addressText" aria-label="Current email address">Generating...</span>
+      </div>
+      <div class="address-actions">
+        <button class="btn btn-primary" id="copyBtn" aria-label="Copy email address to clipboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/></svg>
+          Copy
+        </button>
+        <button class="btn btn-ghost" id="genBtn" aria-label="Generate new email address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+          New
+        </button>
+        <select class="domain-select" id="domainSelect" aria-label="Select email domain"></select>
+        <button class="btn btn-ghost" id="customToggle" style="font-size:12px">Custom</button>
+      </div>
+
+      <!-- Custom form -->
+      <div class="custom-form" id="customForm">
+        <input type="text" class="custom-input" id="customUser" placeholder="username" maxlength="30" aria-label="Custom username" autocomplete="off" />
+        <span class="at-sym">@</span>
+        <select class="domain-select" id="customDomain" aria-label="Select domain for custom address"></select>
+        <button class="btn btn-primary" id="customSave" style="padding:8px 14px">Create</button>
+        <button class="btn btn-ghost" id="customCancel" style="padding:8px 10px">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- INBOX -->
+  <div class="inbox-wrap">
+    <div class="inbox-container">
+      <div class="inbox-bar">
+        <span class="inbox-count" id="inboxCount" aria-live="polite">INBOX</span>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span id="countdownText" style="font-size:11px;color:var(--text-3);font-family:'Fira Code',monospace;min-width:28px;text-align:right" aria-label="Auto-refresh countdown"></span>
+          <button class="btn btn-ghost" id="refreshBtn" style="padding:5px 10px;font-size:12px" aria-label="Refresh inbox">
+            <svg id="refreshIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:13px;height:13px;transition:transform 0.4s"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Email Viewer (above list when open) -->
+      <div class="email-viewer" id="emailViewer" role="region" aria-label="Email viewer">
+        <div class="viewer-header">
+          <div class="viewer-meta">
+            <div class="viewer-subject" id="vSubject"></div>
+            <div class="viewer-from" id="vFrom"></div>
+            <div class="viewer-date" id="vDate"></div>
+          </div>
+          <div class="viewer-actions">
+            <button class="btn btn-danger" id="deleteBtn" style="padding:6px 10px;font-size:12px" aria-label="Delete this email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"/></svg>
+              Delete
+            </button>
+            <button class="btn btn-ghost" id="closeViewer" style="padding:6px 10px;font-size:12px">Close</button>
+          </div>
+        </div>
+        <div class="viewer-tabs">
+          <button class="vtab active" data-tab="html">HTML</button>
+          <button class="vtab" data-tab="text">Text</button>
+        </div>
+        <div class="viewer-body">
+          <iframe id="emailFrame" sandbox="allow-same-origin" title="Email content"></iframe>
+          <div class="viewer-text" id="viewerText"></div>
+        </div>
+      </div>
+
+      <!-- Email list -->
+      <div id="emailList" role="list" aria-label="Inbox messages">
+        <div class="empty" id="emptyState">
+          <div class="empty-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.25 13.5h3.86a2.25 2.25 0 0 1 2.012 1.244l.256.512a2.25 2.25 0 0 0 2.013 1.244h3.218a2.25 2.25 0 0 0 2.013-1.244l.256-.512a2.25 2.25 0 0 1 2.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 0 0-2.15-1.588H6.911a2.25 2.25 0 0 0-2.15 1.588L2.35 13.177a2.25 2.25 0 0 0-.1.661Z"/></svg>
+          </div>
+          <h3>Waiting for emails</h3>
+          <p>Your inbox is ready. Send an email to the address above and it will appear here instantly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="/faq.html">FAQ</a>
+      <span class="footer-sep">&bull;</span>
+      <a href="/kebijakan.html">Kebijakan</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 NAGETHA &mdash; Free temporary email service</div>
+    <div class="footer-made">Made with ♥ by <a href="https://whatsapp.com/channel/0029VbCaDhn11ulT1qwodB2x" target="_blank" rel="noopener noreferrer">VegaTech</a></div>
+  </footer>
+
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const store = { get: k => { try { return JSON.parse(localStorage.getItem("ng_" + k)); } catch { return null; } }, set: (k, v) => localStorage.setItem("ng_" + k, JSON.stringify(v)), remove: k => localStorage.removeItem("ng_" + k) };
+
+const state = { address: null, inbox: null, sessionId: null, emails: [], selectedId: null, sse: null, domains: [] };
+
+// Declare list before any function that uses it
+const list = $("emailList");
+
+function toast(msg, type = "info", ms = 3000) {
+  const el = document.createElement("div");
+  el.className = "toast " + type;
+  el.textContent = msg;
+  $("toasts").appendChild(el);
+  setTimeout(() => { el.style.animation = "tin 0.2s ease reverse"; setTimeout(() => el.remove(), 200); }, ms);
+}
+
+function setStatus(s) {
+  const badge = $("liveBadge"), txt = $("liveText");
+  badge.className = "live-badge" + (s === "connected" ? " state-on" : s === "connecting" ? " state-connecting" : " state-offline");
+  txt.textContent = s === "connected" ? "Live" : s === "connecting" ? "Connecting" : "Offline";
+}
+
+function esc(s) {
+  return String(s || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+function relTime(d) {
+  const ms = Date.now() - new Date(d);
+  if (ms < 60000) return "just now";
+  if (ms < 3600000) return Math.floor(ms/60000) + "m ago";
+  if (ms < 86400000) return new Date(d).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+  return new Date(d).toLocaleDateString([], {month:"short", day:"numeric"});
+}
+
+function fullDate(d) {
+  return new Date(d).toLocaleString([], {dateStyle:"medium", timeStyle:"short"});
+}
+
+async function api(path, opts = {}) {
+  const r = await fetch(path, { headers: { "Content-Type": "application/json" }, ...opts });
+  return r.json();
+}
+
+// ── DOMAINS
+async function loadDomains() {
+  try {
+    const r = await api("/api/domains");
+    state.domains = r.domains || ["vtech.biz.id"];
+  } catch { state.domains = ["vtech.biz.id"]; }
+
+  // Auto-detect domain from current hostname
+  const currentHost = window.location.hostname;
+  const matchedDomain = state.domains.find(d => currentHost === d || currentHost.endsWith("." + d));
+  state.preferredDomain = matchedDomain || state.domains[0];
+
+  [$("domainSelect"), $("customDomain")].forEach(sel => {
+    sel.innerHTML = state.domains.map(d =>
+      `<option value="${d}"${d === state.preferredDomain ? " selected" : ""}>${d}</option>`
+    ).join("");
+  });
+}
+
+// ── CREATE INBOX
+async function createInbox(username, domain) {
+  const sessionId = state.sessionId || (state.sessionId = store.get("sid") || crypto.randomUUID());
+  store.set("sid", sessionId);
+  $("addressText").textContent = "Generating...";
+  setStatus("connecting");
+  if (state.sse) { state.sse.close(); state.sse = null; }
+  try {
+    const d = domain || $("domainSelect").value;
+    const r = await api("/api/inbox", { method: "POST", body: JSON.stringify({ username, domain: d, sessionId }) });
+    if (!r.success) { toast(r.error || "Failed", "err"); return; }
+    state.address = r.inbox.address;
+    state.inbox = r.inbox;
+    state.emails = r.emails || [];
+    store.set("addr", r.inbox.address);
+    $("addressText").textContent = state.address;
+    closeViewer();
+    renderList();
+    connectSSE(state.address);
+    toast("Inbox ready", "ok");
+  } catch { toast("Network error", "err"); setStatus("offline"); }
+}
+
+async function loadExisting(address) {
+  try {
+    const r = await api(`/api/inbox?address=${encodeURIComponent(address)}`);
+    if (r.success) {
+      state.address = r.inbox.address;
+      state.inbox = r.inbox;
+      state.emails = r.emails || [];
+      $("addressText").textContent = state.address;
+      [$("domainSelect")].forEach(s => { if (r.inbox.domain) s.value = r.inbox.domain; });
+      renderList();
+      connectSSE(state.address);
+      return true;
+    }
+  } catch {}
+  return false;
+}
+
+// ── SSE
+function connectSSE(address) {
+  setStatus("connecting");
+  const es = new EventSource(`/api/stream?address=${encodeURIComponent(address)}`);
+  state.sse = es;
+  es.addEventListener("connected", () => setStatus("connected"));
+  es.addEventListener("new_email", e => {
+    try {
+      const email = JSON.parse(e.data);
+      state.emails.unshift(email);
+      renderList();
+      const from = email.from?.name || email.from?.address || "Someone";
+      toast(`New email from ${from}`, "info");
+    } catch {}
+  });
+  es.onerror = () => {
+    setStatus("offline");
+    setTimeout(() => { if (state.address) connectSSE(state.address); }, 5000);
+  };
+}
+
+// ── RENDER LIST
+function renderList() {
+  const empty = $("emptyState");
+  $("inboxCount").textContent = `INBOX${state.emails.length ? " (" + state.emails.length + ")" : ""}`;
+
+  if (!state.emails.length) {
+    list.innerHTML = "";
+    list.appendChild(empty);
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+
+  const existing = new Set(Array.from(list.querySelectorAll(".email-card")).map(el => el.dataset.id));
+
+  state.emails.forEach((email) => {
+    const id = String(email._id);
+    let card = list.querySelector(`.email-card[data-id="${id}"]`);
+    const isActive = state.selectedId === id;
+    const isUnread = !email.read;
+    const isSpam = (email.spamScore || 0) >= 50;
+    const fromName = email.from?.name || email.from?.address || "Unknown";
+    const preview = (email.text || "").replace(/\s+/g, " ").trim().slice(0, 80);
+
+    if (!card) {
+      card = document.createElement("div");
+      card.className = "email-card";
+      card.dataset.id = id;
+      card.setAttribute("role", "listitem");
+      card.addEventListener("click", () => selectEmail(id));
+    }
+
+    card.className = `email-card${isActive ? " active" : ""}${isUnread ? " unread" : ""}`;
+    card.innerHTML = `
+      <div class="card-top">
+        <span class="card-sender">${esc(fromName)}${isSpam ? '<span class="spam-tag">SPAM</span>' : ""}</span>
+        <span class="card-time">${relTime(email.receivedAt)}</span>
+      </div>
+      <div class="card-subject">${esc(email.subject || "(No Subject)")}</div>
+      <div class="card-preview">${esc(preview || "No preview")}</div>
+    `;
+
+    if (!existing.has(id)) {
+      const first = list.querySelector(".email-card");
+      if (first) list.insertBefore(card, first);
+      else list.appendChild(card);
+    }
+  });
+}
+
+// ── SELECT EMAIL
+async function selectEmail(id) {
+  state.selectedId = id;
+  list.querySelectorAll(".email-card").forEach(c => {
+    c.classList.toggle("active", c.dataset.id === id);
+    if (c.dataset.id === id) c.classList.remove("unread");
+  });
+  const local = state.emails.find(e => String(e._id) === id);
+  if (local) local.read = true;
+
+  try {
+    const r = await api(`/api/emails/${id}`);
+    if (!r.success) return;
+    openViewer(r.email);
+  } catch { toast("Failed to load email", "err"); }
+}
+
+// ── VIEWER
+function openViewer(email) {
+  const fromName = email.from?.name || email.from?.address || "";
+  const fromAddr = email.from?.address || "";
+  $("vSubject").textContent = email.subject || "(No Subject)";
+  $("vFrom").textContent = `${fromName} <${fromAddr}>`;
+  $("vDate").textContent = fullDate(email.receivedAt);
+
+  const frame = $("emailFrame");
+  if (email.html) {
+    const blob = new Blob([email.html], { type: "text/html" });
+    frame.src = URL.createObjectURL(blob);
+    frame.style.display = "block";
+  } else {
+    frame.style.display = "none";
+  }
+  $("viewerText").textContent = email.text || "(No text content)";
+
+  setViewerTab("html");
+  const viewer = $("emailViewer");
+  viewer.classList.add("open");
+  viewer.scrollIntoView({ behavior: "smooth", block: "start" });
+  state.selectedEmail = email;
+}
+
+function closeViewer() {
+  $("emailViewer").classList.remove("open");
+  state.selectedId = null;
+  state.selectedEmail = null;
+  list.querySelectorAll(".email-card").forEach(c => c.classList.remove("active"));
+}
+
+function setViewerTab(tab) {
+  document.querySelectorAll(".vtab").forEach(t => t.classList.toggle("active", t.dataset.tab === tab));
+  $("emailFrame").style.display = tab === "html" ? "block" : "none";
+  $("viewerText").style.display = tab === "text" ? "block" : "none";
+}
+
+// ── DELETE
+async function deleteSelected() {
+  if (!state.selectedId) return;
+  const id = state.selectedId;
+  try {
+    const r = await api(`/api/emails/${id}`, { method: "DELETE" });
+    if (r.success) {
+      state.emails = state.emails.filter(e => String(e._id) !== id);
+      closeViewer();
+      renderList();
+      toast("Deleted", "ok");
+    }
+  } catch { toast("Delete failed", "err"); }
+}
+
+// ── EVENTS
+$("copyBtn").addEventListener("click", () => {
+  if (!state.address) return;
+  navigator.clipboard.writeText(state.address).then(() => toast("Copied!", "ok")).catch(() => toast("Copy failed", "err"));
+});
+
+$("genBtn").addEventListener("click", () => createInbox(null, $("domainSelect").value));
+
+// ── AUTO-REFRESH COUNTDOWN
+const REFRESH_INTERVAL = 30;
+let countdownVal = REFRESH_INTERVAL;
+let countdownTimer = null;
+
+function resetCountdown() {
+  countdownVal = REFRESH_INTERVAL;
+  updateCountdownUI();
+}
+
+function updateCountdownUI() {
+  const el = $("countdownText");
+  if (el) el.textContent = countdownVal + "s";
+}
+
+async function doRefresh(manual = false) {
+  if (!state.address) return;
+  const icon = $("refreshIcon");
+  if (icon) icon.style.transform = "rotate(360deg)";
+  setTimeout(() => { if (icon) icon.style.transform = ""; }, 400);
+  await loadExisting(state.address);
+  if (manual) toast("Refreshed", "info");
+  resetCountdown();
+}
+
+function startCountdown() {
+  if (countdownTimer) clearInterval(countdownTimer);
+  resetCountdown();
+  countdownTimer = setInterval(async () => {
+    countdownVal--;
+    updateCountdownUI();
+    if (countdownVal <= 0) {
+      await doRefresh(false);
+    }
+  }, 1000);
+}
+
+$("refreshBtn").addEventListener("click", () => doRefresh(true));
+
+$("customToggle").addEventListener("click", () => {
+  $("customForm").classList.toggle("open");
+});
+
+$("customCancel").addEventListener("click", () => $("customForm").classList.remove("open"));
+
+$("customSave").addEventListener("click", () => {
+  const u = $("customUser").value.trim().toLowerCase();
+  if (!u || !/^[a-z0-9._-]{3,30}$/.test(u)) { toast("Invalid username (3-30 chars: letters, numbers, dot, dash)", "err"); return; }
+  $("customForm").classList.remove("open");
+  $("customUser").value = "";
+  createInbox(u, $("customDomain").value);
+});
+
+$("customUser").addEventListener("keydown", e => { if (e.key === "Enter") $("customSave").click(); });
+
+$("closeViewer").addEventListener("click", closeViewer);
+$("deleteBtn").addEventListener("click", deleteSelected);
+
+document.querySelectorAll(".vtab").forEach(tab => {
+  tab.addEventListener("click", () => setViewerTab(tab.dataset.tab));
+});
+
+$("domainSelect").addEventListener("change", function() {
+  if (state.address) {
+    const user = state.address.split("@")[0];
+    createInbox(user, this.value);
+  }
+});
+
+// ── LOADING SCREEN
+const LOAD_MSGS = [
+  "Warming up your inbox\u2026",
+  "Finding a cozy mailbox\u2026",
+  "Teaching electrons to deliver\u2026",
+  "Polishing the inbox\u2026",
+  "Summoning mail spirits\u2026",
+  "Almost ready\u2026",
+];
+let loadMsgIdx = 0;
+let loadMsgTimer = null;
+let loadBarVal = 0;
+let loadBarTimer = null;
+
+function startLoader() {
+  const bar = $("loadBar");
+  const msgEl = $("loadMsg");
+  // progress bar fills over ~2.4s
+  loadBarTimer = setInterval(() => {
+    loadBarVal = Math.min(loadBarVal + (Math.random() * 4 + 1.5), 92);
+    if (bar) bar.style.width = loadBarVal + "%";
+  }, 80);
+  // cycle messages every 700ms
+  loadMsgTimer = setInterval(() => {
+    if (!msgEl) return;
+    msgEl.classList.add("fade");
+    setTimeout(() => {
+      loadMsgIdx = (loadMsgIdx + 1) % LOAD_MSGS.length;
+      msgEl.textContent = LOAD_MSGS[loadMsgIdx];
+      msgEl.classList.remove("fade");
+    }, 250);
+  }, 700);
+}
+
+function hideLoader() {
+  clearInterval(loadBarTimer);
+  clearInterval(loadMsgTimer);
+  const bar = $("loadBar");
+  if (bar) bar.style.width = "100%";
+  setTimeout(() => {
+    const screen = $("loadScreen");
+    if (screen) screen.classList.add("hiding");
+    setTimeout(() => {
+      if (screen) screen.remove();
+    }, 650);
+  }, 260);
+}
+
+// ── INIT
+async function init() {
+  startLoader();
+  const minDelay = new Promise(r => setTimeout(r, 1800));
+  await loadDomains();
+  const sid = store.get("sid");
+  const addr = store.get("addr");
+  state.sessionId = sid;
+
+  // Only restore saved address if its domain matches the preferred domain
+  // (prevents loading @vtech.biz.id when visiting nageetha.web.id)
+  const addrDomain = addr ? addr.split("@")[1] : null;
+  const domainMatch = addrDomain && addrDomain === state.preferredDomain;
+
+  if (addr && domainMatch) {
+    const ok = await loadExisting(addr);
+    if (!ok) await createInbox();
+  } else {
+    if (addr && !domainMatch) {
+      // Clear stale cross-domain address
+      store.remove("addr");
+    }
+    await createInbox();
+  }
+  startCountdown();
+  await minDelay;
+  hideLoader();
+}
+
+init();
+</script>
+</body>
+</html>
