@@ -127,9 +127,9 @@ function humanSize(bytes) {
 async function loadDomains() {
   try {
     const res = await API.get("/api/domains");
-    state.domains = res.domains || ["vtech.biz.id"];
+    state.domains = res.domains || ["nageetha.web.id"];
   } catch {
-    state.domains = ["vtech.biz.id"];
+    state.domains = ["nageetha.web.id"];
   }
   renderDomainSelects();
 }
