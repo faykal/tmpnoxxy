@@ -1331,8 +1331,8 @@ async function api(path, opts = {}) {
 async function loadDomains() {
   try {
     const r = await api("/api/domains");
-    state.domains = r.domains || ["vtech.biz.id"];
-  } catch { state.domains = ["vtech.biz.id"]; }
+    state.domains = r.domains || ["nageetha.web.id"];
+  } catch { state.domains = ["nageetha.web.id"]; }
 
   // Auto-detect domain from current hostname
   const currentHost = window.location.hostname;
