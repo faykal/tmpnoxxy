@@ -30,8 +30,7 @@ module.exports = {
   },
 
   domains: [
-    "nageetha.web.id",
-    "vtech.biz.id"
+    "nageetha.web.id"
   ],
 
   inbox: {
@@ -47,7 +46,7 @@ module.exports = {
 
   admin: {
     username: process.env.ADMIN_USER || "admin",
-    password: process.env.ADMIN_PASS || "nagetha_admin_2024"
+    password: process.env.ADMIN_PASS || "nagetha_admin_2026"
   }
 };
 /*
